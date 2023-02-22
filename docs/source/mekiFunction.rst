@@ -1,10 +1,10 @@
 mekiFunction
 ============
 
-.. py:data:: Cmpr
+.. py:attribute:: Cmpr
 
     .. image:: _static/cmpr.png
-        :width: 400
+        :width: 300
         :alt: Compare component
 
     **Cmpr** is used to compare two input values.   
@@ -20,10 +20,10 @@ mekiFunction
     :param Y: Input value
     :type Y: real
 
-.. py:data:: Count
+.. py:attribute:: Count
 
     .. image:: _static/count.png
-        :width: 400
+        :width: 300
         :alt: Count component
 
     **Count** is used to count the transistion of a boolean value from *false* to *true*.
@@ -40,3 +40,54 @@ mekiFunction
     :type Enable: boolean
     :param Reset: If *true*, **out** = **preset** and no counting. It act as a reset switch
     :type Reset: boolean
+
+.. py:attribute:: Freq
+
+    .. image:: _static/freq.png
+        :width: 300
+        :alt: Frequency component
+
+    **Freq** is used to calculate the changing frequency of a boolean value.
+
+    :param Pps: The changes in the frequency per second
+    :type Pps: real
+    :param Ppm: The changes in the frequency per minute
+    :type Ppm: real
+    :param In: Input value
+    :type In: boolean
+
+.. py:attribute:: Hysteresis
+
+    .. image:: _static/hysteresis.png
+        :width: 300
+        :alt: Hysteresis component
+
+    **Hysteresis** can output a boolean value according to thier rising edge and falling edge limit.
+
+    :param In: Input value
+    :type In: real    
+    :param Out: Output value
+    :type Out: boolean
+    :param Rising_Edge: Rising edge limit, **Out** become *true* when **In** greater than it 
+    :type Rising_Edge: real
+    :param Falling_Edge: Falling edge limit, **Out** become *false* when **In** less than it
+    :type Falling_Edge: real
+
+.. py:attribute:: IRamp
+
+    .. image:: _static/iramp.png
+        :width: 300
+        :alt: IRamp component
+
+    **IRamp** provides linear ramping output based on time set.
+
+    :param Out: Output value
+    :type Out: integer
+    :param Min: Start value of the ramping
+    :type Min: integer
+    :param Max: End value of the ramping
+    :type Max: integer
+    :param Delta: Value change every time
+    :type Delta: integer
+    :param Secs: Time intervals very time change
+    :type Secs: integer, second

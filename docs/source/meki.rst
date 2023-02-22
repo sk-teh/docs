@@ -4,7 +4,7 @@ meki
 .. py:data:: xpertioPlatformService
 
     .. image:: _static/xpertioPlatformService.png
-        :width: 400
+        :width: 300
         :alt: xpertioPlatformService component
 
     **xpertioPlatformService** is a component where it gets the platform identifier which defines how this device should be provisioned.  
@@ -15,7 +15,7 @@ meki
     :type meta: string
     :param platformId: Get the platform identifier which defines how this device should be provisioned
     :type platformId: string
-    :param platformVer: Display version of the controller
+    :param platformVer: Version of the controller
     :type platformVer: string
-    :param memAvailable: Display available memory of the controller
+    :param memAvailable: Available memory of the controller
     :type memAvailable: string
