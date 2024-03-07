@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Kits Application in XpertIO'
-copyright = '2023, MEK Intellisys Pte Ltd'
+copyright = '2024, MEK Intellisys Pte Ltd'
 author = 'MEK Intellisys'
 release = '0.1'
 
@@ -31,6 +31,7 @@ html_sidebars = {
         'index.html',
         'meki.html',
         'mekiFunction.html',
+        'mekiLogic.html',
     ]
 }
 # html_theme_options = {
