@@ -3,8 +3,8 @@ mekiFunction
 
 .. py:attribute:: Cmpr
 
-    .. image:: _static/cmpr.png
-        :width: 300
+    .. image:: _static/img/func/cmpr.png
+        :width: 250
         :alt: Compare component
 
     **Cmpr** is used to compare two input values.   
@@ -22,8 +22,8 @@ mekiFunction
 
 .. py:attribute:: Count
 
-    .. image:: _static/count.png
-        :width: 300
+    .. image:: _static/img/func/count.png
+        :width: 250
         :alt: Count component
 
     **Count** is used to count the transistion of a boolean value from *false* to *true*.
@@ -43,8 +43,8 @@ mekiFunction
 
 .. py:attribute:: Freq
 
-    .. image:: _static/freq.png
-        :width: 300
+    .. image:: _static/img/func/freq.png
+        :width: 250
         :alt: Frequency component
 
     **Freq** is used to calculate the changing frequency of a boolean value.
@@ -58,8 +58,8 @@ mekiFunction
 
 .. py:attribute:: Hysteresis
 
-    .. image:: _static/hysteresis.png
-        :width: 300
+    .. image:: _static/img/func/hysteresis.png
+        :width: 250
         :alt: Hysteresis component
 
     **Hysteresis** can output a boolean value according to thier rising edge and falling edge limit.
@@ -75,8 +75,8 @@ mekiFunction
 
 .. py:attribute:: IRamp
 
-    .. image:: _static/iramp.png
-        :width: 300
+    .. image:: _static/img/func/iramp.png
+        :width: 250
         :alt: IRamp component
 
     **IRamp** provides linear ramping output based on time set.
@@ -91,3 +91,109 @@ mekiFunction
     :type Delta: integer
     :param Secs: Time intervals very time change
     :type Secs: integer, second
+
+.. py:attribute:: Limiter
+
+    .. image:: _static/img/func/limiter.png
+        :width: 250
+        :alt: Limiter component
+
+    **Limiter** limits the output according to the upper limit and lower limit.
+
+    :param Out: Output value
+    :type Out: real
+    :param In: Input value
+    :type In: real
+    :param lowLmt: Lower limit for **Out**
+    :type lowLmt: real
+    :param highLmt: Upper limit for **Out**
+    :type highLmt: real
+
+.. py:attribute:: Linearize
+
+    .. image:: _static/img/func/linearize.png
+        :width: 250
+        :alt: Linearize component
+
+    **Linearize** defines 8 sets of corresponding data, and calculate the output value according to the input value with linearization data.
+
+    :param Out: Output value
+    :type Out: real
+    :param In: Input value
+    :type In: real
+    :param x0-x9: Range for **In**
+    :type x0-x9: real
+    :param y0-y9: Range of converted **Out**
+    :type y0-y9: real
+
+.. py:attribute:: Ramp
+
+    .. image:: _static/img/func/ramp.png
+        :width: 250
+        :alt: Ramp component
+
+    **Ramp** provides a triangle or sawtooth type ramping output.
+
+    :param Out: Output value
+    :type Out: real
+    :param Min: Minimum value of the ramping **Out**
+    :type Min: real
+    :param Max: Maximum value of the ramping **Out**
+    :type Max: real
+    :param Period: The time for one complete **Min** / **Max** in second for ramp **Out**, range from 0 to 65535 
+    :type Period: integer, second
+    :param ScanPeriod: The time for **Out** updating interval, range from 100 to 65535
+    :type ScanPeriod: integer, millisecond
+    :param RampType: Ramp type, *triangle* or *sawtooth*
+    :type RampType: option
+
+.. py:attribute:: SRLatch
+
+    .. image:: _static/img/func/srlatch.png
+        :width: 250
+        :alt: SRLatch component
+
+    **SRLatch** keeps output value to true as long as the set value is true, until the reset is triggered.   
+
+    :param Out: Output value
+    :type Out: boolean
+    :param Set: Triggers to set **Out** to *true*
+    :type Set: boolean
+    :param Reset: Triggers to restore **Out** back to *false*
+    :type Reset: boolean
+
+.. py:attribute:: TickTock
+
+    .. image:: _static/img/func/ticktock.png
+        :width: 250
+        :alt: TickTock component
+
+    **TickTock** outputs *true* and *false* values alternately according to the frequency
+
+    :param Out: Constantly change between *true* and *false*
+    :type Out: boolean
+    :param TickPerSec: Change frequency of **Out**, range from 1 to 10
+    :type TickPerSec: integer
+
+.. py:attribute:: UpDn
+
+    .. image:: _static/img/func/updn.png
+        :width: 250
+        :alt: UpDn component
+
+    **UpDn** records the changes of the input value, the record number can be documented in increasing or reducing order. The records can be reset too.
+
+    :param Out: Output Value
+    :type Out: real
+    :param Ovr: *true* when **Out** is greater than **Limit**
+    :type Ovr: boolean
+    :param In: Input Value
+    :type In: boolean
+    :param Rst: Triggers to restore **Out** to *0*
+    :type Rst: boolean
+    :param CDwn: The trend of recorded **Out**, either *Up* or *Down*
+    :type CDwn: option
+    :param Limit: Limits **Out** when **HoldAtLimit** is *true*
+    :type Limit: real
+    :param HoldAtLimit: Enable the **Limit** function
+    :type HoldAtLimit: boolean
