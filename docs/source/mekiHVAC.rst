@@ -182,10 +182,11 @@ mekiHVAC
     - When **In Min** < **In** < **In Max**, the output value scales linearly between Out Min and Out Max.
     - If **In** < **In Min**, the value is capped at **OutMin**.
     - If **In** > **In Max**, the value is capped at **OutMax**.
-    - **Out** value is calulated by equation below:
-    .. image:: _static/img/hvac/resetformula.png
-        :width: 400
-   
+    - **Out**is calulated by equation below:
+
+    .. math:: 
+        Out= (\frac{OutMax-OutMin}{InMax-InMin}) * (In - InMin) + OutMin
+
     :param Out: Output value
     :type Out: real
     :param In: Input value
