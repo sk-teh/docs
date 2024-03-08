@@ -13,5 +13,7 @@ No other controllers can be used.
    mekiFunction
    mekiLogic
    mekiHVAC
+   mekiMath
+   
    
    
