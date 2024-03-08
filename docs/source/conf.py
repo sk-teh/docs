@@ -32,6 +32,7 @@ html_sidebars = {
         'meki.html',
         'mekiFunction.html',
         'mekiLogic.html',
+        'mekiHVAC.html',
     ]
 }
 # html_theme_options = {
