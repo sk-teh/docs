@@ -34,6 +34,8 @@ html_sidebars = {
         'mekiLogic.html',
         'mekiHVAC.html',
         'mekiMath.html',
+        'mekiPriority.html',
+        'mekiSchedule.html',
     ]
 }
 # html_theme_options = {
