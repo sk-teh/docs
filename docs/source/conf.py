@@ -37,6 +37,7 @@ html_sidebars = {
         'mekiPriority.html',
         'mekiSchedule.html',
         'mekiTempTable.html',
+        'mekiTiming.html',
         
     ]
 }
