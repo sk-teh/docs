@@ -1,5 +1,7 @@
 mekiIO
 ======
+DDC28P/IO22U/28U/28P/KXM16P/22P/IP0080
+--------------------------------------
 
 .. py:data:: AO
 
@@ -38,16 +40,14 @@ mekiIO
                         - *False* = normal output, *True* = out of service.
                         - When **OutofService** is *true*, the **Out** is always *0*
     :type OutofServices: boolean
-
-    :param SquarerootOutput: Enables the output to take the square root operation.
-
-                        - Relationship between output value and physical value: 
-                            - *Physical Calculated Value* (%) = *Out* (%) * *Out* (%)
-                            - *Physical Value* = *Physical Calculated Value* (%) * (*Out High* - *Out Low*) + *Out Low*
-                            - **Out** (%) = 100 * **Out**/ (**ScaleHigh** - **ScaleLow**)
-                            - *Out*(High) = 10V (voltage type), 20mA (current type)
-                            - *Out*(Low) = 0V (voltage type), 0mA (current type 0 - 20mA), 4mA (current type 4 - 20mA)
-    :type SquarerootOutput: boolean
+    :param SquarerootOutput: Enables the output to take the square root operation, relationship between output value and physical value:
+                
+                - *Physical Calculated Value* (%) = *Out* (%) * *Out* (%)
+                - *Physical Value* = *Physical Calculated Value* (%) * (*Out High* - *Out Low*) + *Out Low*
+                - **Out** (%) = 100 * **Out**/ (**ScaleHigh** - **ScaleLow**)
+                - *Out*(High) = 10V (voltage type), 20mA (current type)
+                - *Out*(Low) = 0V (voltage type), 0mA (current type 0 - 20mA), 4mA (current type 4 - 20mA)
+    :type SquarerootOutput: option
     :param ClampingHighEnable: Enables the clamping *high* limit control for the output value.
     :type ClampingHighEnable: boolean
     :param ClampingLowEnable: Enables the clamping *low* limit control for the output value.

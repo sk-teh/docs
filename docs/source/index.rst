@@ -6,11 +6,12 @@ All the MEK-i kits can only be used with XpertIO controllers.
 No other controllers can be used.
 
 .. toctree::
-   :maxdepth: 20
+   :maxdepth: 30
    :Caption: Kits
 
    meki
    mekiIO
+   mekiRegs
    mekiFunction
    mekiHVAC
    mekiLogic
