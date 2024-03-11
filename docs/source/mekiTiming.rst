@@ -6,17 +6,17 @@ mekiTiming
     .. image:: _static/img/timing/dlyoff.png
         :width: 250
         :alt: DlyOff component
-    
+
     **DlyOff** delays the on to off transition by a time delay.
 
     :param Out: Output value
     :type Out: boolean
     :param In: Input value
     :type In: boolean
-    :param DelayTime: Delays time from on to off transition, units is second(s)
-    :type DelayTime: integer
-    :param Hold: Countdown of delay time, units is millisecond(ms)
-    :type Hold: integer
+    :param DelayTime: Delays time from on to off transition
+    :type DelayTime: integer, second
+    :param Hold: Countdown of delay time
+    :type Hold: integer, millisecond
 
 .. py:attribute:: DlyOn
 
@@ -30,10 +30,10 @@ mekiTiming
     :type Out: boolean
     :param In: Input value
     :type In: boolean
-    :param DelayTime: Delays time from off to on transition, units is second(s)
-    :type DelayTime: integer
-    :param Hold: Countdown of delay time, units is millisecond(ms)
-    :type Hold: integer
+    :param DelayTime: Delays time from off to on transition
+    :type DelayTime: integer, second
+    :param Hold: Countdown of delay time
+    :type Hold: integer, millisecond
 
 .. py:attribute:: OneShot
 
@@ -48,8 +48,8 @@ mekiTiming
     :type Out: boolean
     :param In: Input value
     :type In: boolean
-    :param PulseWidth: Pulse width, units is second(s)
-    :type PulseWidth: integer
+    :param PulseWidth: Pulse width
+    :type PulseWidth: integer, second
     :param CanRetrig: Enable the retrigger function
     :type CanRetrig: boolean
 
@@ -63,10 +63,10 @@ mekiTiming
 
     :param Out: Output value
     :type Out: boolean
-    :param RemainTime: Remaining override time, in min
-    :type RemainTime: integer
-    :param OverrideTime: Override time, in min
-    :type OverrideTime: integer
+    :param RemainTime: Remaining override time
+    :type RemainTime: integer, minute
+    :param OverrideTime: Override time
+    :type OverrideTime: integer, minute
     :param Trigger: Triggers the component start
     :type Trigger: boolean
 
@@ -87,6 +87,6 @@ mekiTiming
     :param Run: fire the timer on transition from false to true
     :type Run: option
     :param Time: Duration of output pulse
-    :type Time: integer
+    :type Time: integer, second
     :param Left: Remaining time before output transition from true to false
-    :type Left: integer
+    :type Left: integer, second

@@ -182,7 +182,7 @@ mekiHVAC
     - When **In Min** < **In** < **In Max**, the output value scales linearly between Out Min and Out Max.
     - If **In** < **In Min**, the value is capped at **OutMin**.
     - If **In** > **In Max**, the value is capped at **OutMax**.
-    - **Out**is calulated by equation below:
+    - **Out** is calulated by equation below:
 
     .. math:: 
         Out= (\frac{OutMax-OutMin}{InMax-InMin}) * (In - InMin) + OutMin

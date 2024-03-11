@@ -30,6 +30,7 @@ html_sidebars = {
     '**': [
         'index.html',
         'meki.html',
+        'mekiIO.html',
         'mekiFunction.html',
         'mekiHVAC.html',
         'mekiLogic.html',

@@ -10,6 +10,7 @@ No other controllers can be used.
    :Caption: Kits
 
    meki
+   mekiIO
    mekiFunction
    mekiHVAC
    mekiLogic
