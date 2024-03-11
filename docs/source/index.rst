@@ -11,13 +11,14 @@ No other controllers can be used.
 
    meki
    mekiFunction
-   mekiLogic
    mekiHVAC
+   mekiLogic
    mekiMath
    mekiPriority
    mekiSchedule
    mekiTempTable
    mekiTiming
+   mekiTypes
    
 
    

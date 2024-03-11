@@ -31,13 +31,14 @@ html_sidebars = {
         'index.html',
         'meki.html',
         'mekiFunction.html',
-        'mekiLogic.html',
         'mekiHVAC.html',
+        'mekiLogic.html',
         'mekiMath.html',
         'mekiPriority.html',
         'mekiSchedule.html',
         'mekiTempTable.html',
         'mekiTiming.html',
+        'mekiTypes.html',
         
     ]
 }
