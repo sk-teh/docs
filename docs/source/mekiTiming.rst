@@ -6,7 +6,7 @@ mekiTiming
     .. image:: _static/img/timing/dlyoff.png
         :width: 250
         :alt: DlyOff component
-
+    
     **DlyOff** delays the on to off transition by a time delay.
 
     :param Out: Output value
