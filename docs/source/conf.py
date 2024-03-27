@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Kits Application in XpertIO'
-copyright = '2023, MEK Intellisys Pte Ltd'
+copyright = '2024, MEK Intellisys Pte Ltd'
 author = 'MEK Intellisys'
 release = '0.1'
 
@@ -17,7 +17,7 @@ release = '0.1'
 extensions = []
 
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = ['_build']
 
 
 
@@ -30,7 +30,18 @@ html_sidebars = {
     '**': [
         'index.html',
         'meki.html',
+        'mekiIO.html',
+        'mekiRegs.html',
         'mekiFunction.html',
+        'mekiHVAC.html',
+        'mekiLogic.html',
+        'mekiMath.html',
+        'mekiPriority.html',
+        'mekiSchedule.html',
+        'mekiTempTable.html',
+        'mekiTiming.html',
+        'mekiTypes.html',
+        
     ]
 }
 # html_theme_options = {
