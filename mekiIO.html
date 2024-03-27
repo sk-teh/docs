@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mekiIO &mdash; Kits Application in XpertIO 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mekiRegs" href="mekiRegs.html" />
+    <link rel="prev" title="meki" href="meki.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Kits Application in XpertIO
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Kits</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="meki.html">meki</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mekiIO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ddc28p-io22u-28u-28p-kxm16p-22p-ip0080">DDC28P/IO22U/28U/28P/KXM16P/22P/IP0080</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#AO"><code class="docutils literal notranslate"><span class="pre">AO</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#DI"><code class="docutils literal notranslate"><span class="pre">DI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#DO"><code class="docutils literal notranslate"><span class="pre">DO</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#UI"><code class="docutils literal notranslate"><span class="pre">UI</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mekiRegs.html">mekiRegs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiFunction.html">mekiFunction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiHVAC.html">mekiHVAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiLogic.html">mekiLogic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiMath.html">mekiMath</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiPriority.html">mekiPriority</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiSchedule.html">mekiSchedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTempTable.html">mekiTempTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTiming.html">mekiTiming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTypes.html">mekiTypes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Kits Application in XpertIO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">mekiIO</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/mekiIO.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mekiio">
+<h1>mekiIO<a class="headerlink" href="#mekiio" title="Link to this heading"></a></h1>
+<section id="ddc28p-io22u-28u-28p-kxm16p-22p-ip0080">
+<h2>DDC28P/IO22U/28U/28P/KXM16P/22P/IP0080<a class="headerlink" href="#ddc28p-io22u-28u-28p-kxm16p-22p-ip0080" title="Link to this heading"></a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="AO">
+<span class="sig-name descname"><span class="pre">AO</span></span><a class="headerlink" href="#AO" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/ao.png"><img alt="AO component" src="_images/ao.png" style="width: 300px;" /></a>
+<p><strong>AO</strong> is the component provides an interface for the physical analogue output point that is able to source/drive a 0 to 20mA current or 0 to 10V voltage signal.
+The output type is selected via AO configuration and hardware jumper setting.</p>
+<p>The analogue output provides 16 levels of prioritized command to control to the physical point.
+<strong>In1</strong> has the highest priority whereas <strong>In16</strong> has the lowest.
+The input may have a commanded value (valid floating value) or a null value (usually NaN in floating point).
+A <em>null</em> value indicates that there is no value (or not active) in that priority.
+The analogue output continuously monitors all prioritized inputs (<strong>In1</strong> to <strong>In16</strong>) to locate the entry with the highest priority non-NULL value and outputs it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em><em>, </em><em>percentage</em>) – Output value</p></li>
+<li><p><strong>Rawvalue</strong> (<em>real</em>) – Raw output value depending on the <strong>AOType</strong>, equal to 0-10 when <strong>AOType</strong> is set to 0V-10V</p></li>
+<li><p><strong>Minvalue</strong> (<em>real</em><em>, </em><em>percentage</em>) – Min output value</p></li>
+<li><p><strong>Maxvalue</strong> (<em>real</em><em>, </em><em>percentage</em>) – Max output value</p></li>
+<li><p><strong>In1-In16</strong> (<em>real</em>) – 16-level priority input, higher level input have higher priority to control <strong>Out</strong> value</p></li>
+<li><p><strong>Fallback</strong> (<em>real</em>) – Default <strong>Out</strong> value when all <strong>In1-In16</strong> are <em>Null</em></p></li>
+<li><p><strong>ReverseOutput</strong> (<em>boolean</em>) – <p>Enables to reverse the output.</p>
+<ul>
+<li><p><em>False</em> = normal output, <em>True</em> = reverse output</p></li>
+<li><p><strong>ReverseOutput</strong> (%) = 100 - <strong>Out</strong> (%)</p></li>
+</ul>
+</p></li>
+<li><p><strong>OutofServices</strong> (<em>boolean</em>) – <p>Enables the output to make loss of every function.</p>
+<ul>
+<li><p><em>False</em> = normal output, <em>True</em> = out of service.</p></li>
+<li><p>When <strong>OutofService</strong> is <em>true</em>, the <strong>Out</strong> is always <em>0</em></p></li>
+</ul>
+</p></li>
+<li><p><strong>SquarerootOutput</strong> (<em>option</em>) – <p>Enables the output to take the square root operation, relationship between output value and physical value:</p>
+<ul>
+<li><p><em>Physical Calculated Value</em> (%) = <em>Out</em> (%) * <em>Out</em> (%)</p></li>
+<li><p><em>Physical Value</em> = <em>Physical Calculated Value</em> (%) * (<em>Out High</em> - <em>Out Low</em>) + <em>Out Low</em></p></li>
+<li><p><strong>Out</strong> (%) = 100 * <strong>Out</strong>/ (<strong>ScaleHigh</strong> - <strong>ScaleLow</strong>)</p></li>
+<li><p><a href="#id1"><span class="problematic" id="id2">*</span></a>Out*(High) = 10V (voltage type), 20mA (current type)</p></li>
+<li><p><a href="#id3"><span class="problematic" id="id4">*</span></a>Out*(Low) = 0V (voltage type), 0mA (current type 0 - 20mA), 4mA (current type 4 - 20mA)</p></li>
+</ul>
+</p></li>
+<li><p><strong>ClampingHighEnable</strong> (<em>boolean</em>) – Enables the clamping <em>high</em> limit control for the output value.</p></li>
+<li><p><strong>ClampingLowEnable</strong> (<em>boolean</em>) – Enables the clamping <em>low</em> limit control for the output value.</p></li>
+<li><p><strong>ResetMinvalue</strong> (<em>boolean</em>) – Enables to reset the <strong>MinValue</strong> back to 0.</p></li>
+<li><p><strong>ResetMaxvalue</strong> (<em>boolean</em>) – Enables to reset the <strong>MaxValue</strong> back to 0.</p></li>
+<li><p><strong>ClampingHigh</strong> (<em>real</em>) – Output <em>high</em> limit, set the <strong>Maxvalue</strong> value even if it <em>exceeds</em> the processed value</p></li>
+<li><p><strong>ClampingLow</strong> (<em>real</em>) – Output <em>low</em> limit, set the <strong>Minvalue</strong> value even if it <em>falls</em> the processed value</p></li>
+<li><p><strong>ScaleHigh</strong> (<em>real</em>) – Output scale <em>high</em> value</p></li>
+<li><p><strong>ScaleLow</strong> (<em>real</em>) – <p>Output value when physical output value equals to lowest value</p>
+<ul>
+<li><p>Voltage (0 - 10V): 0V</p></li>
+<li><p>Current (0 - 20mA): 0mA</p></li>
+<li><p>Current (4 - 20mA): 4mA</p></li>
+</ul>
+<dl class="simple">
+<dt>AO uses the <strong>scalelow</strong> and <strong>scalehigh</strong> to convert the output value to physical value. Raw value register shows the physical output.</dt><dd><ul>
+<li><p>Physical Value = (<strong>Out</strong> (%)) * (<strong>ScaleHigh</strong> - <strong>ScaleLow</strong>)</p></li>
+</ul>
+</dd>
+<dt>For instance:</dt><dd><ul>
+<li><p><strong>AOType</strong> = Current 4 - 20mA</p></li>
+<li><p><strong>ScaleLow</strong> Value = 0%</p></li>
+<li><p><strong>ScaleHigh</strong> Value = 100%</p></li>
+<li><p><strong>Out</strong> Value = 50%</p></li>
+</ul>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>AOType</strong> (<em>option</em>) – <ul>
+<li><p>Voltage, 0-10V</p></li>
+<li><p>Current, 4mA-20mA</p></li>
+<li><p>Current, 0mA-20mA</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="DI">
+<span class="sig-name descname"><span class="pre">DI</span></span><a class="headerlink" href="#DI" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/di.png"><img alt="DI component" src="_images/di.png" style="width: 300px;" /></a>
+<p><strong>DI</strong> component is used for reading the digital value connected to one of the physical digital input points on the controller.
+It is typically used to monitor the status of contact closures from various field devices such as switches, open/close sensors or any other dry contact devices.</p>
+<p>There are 16 digital input points on <em>IO28U/DDC28P</em> controller. Eight of them are derived directly from digital input detection circuitry (+5Vdc pulled up), named as <em>DI1</em> to <em>DI8</em>.
+Whereby the other eights are derived from universal input (<em>UI</em> or <em>AI</em>) using value conversion (DI9 to D16). <em>DI1</em> to <em>DI8</em> might have different characteristics comparing to <em>DI9</em> to <em>DI16</em> depend on the AI settings.
+Please refer to AI component section regarding the conversion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Output state</p></li>
+<li><p><strong>Alarm</strong> (<em>boolean</em>) – Digital alarm state</p></li>
+<li><p><strong>OffLatch</strong> (<em>boolean</em>) – Off lock status</p></li>
+<li><p><strong>OnLatch</strong> (<em>boolean</em>) – On lock status</p></li>
+<li><p><strong>OffCounter</strong> (<em>integer</em>) – Accumulate number when <em>off</em> counter, from ranges of 0 - 65535</p></li>
+<li><p><strong>OnCounter</strong> (<em>integer</em>) – Accumulate number when <em>on</em> counter, from ranges of 0 - 65535</p></li>
+<li><p><strong>OnTimer</strong> (<em>integer</em>) – Accumulate counting value when <em>on</em> timer, from ranges of 0 - 65535</p></li>
+<li><p><strong>OffTimer</strong> (<em>integer</em>) – Accumulate counting value when <em>off</em> timer, from ranges of 0 - 65535</p></li>
+<li><p><strong>OutofServices</strong> (<em>boolean</em>) – <p>Enables the output to make loss of every function.</p>
+<ul>
+<li><p><em>False</em> = normal output, <em>True</em> = out of service.</p></li>
+<li><p>When <strong>OutofService</strong> is <em>true</em>, the <strong>Out</strong> is always <em>0</em></p></li>
+</ul>
+</p></li>
+<li><p><strong>Polarity</strong> (<em>option</em>) – <p>Inverts the output polarity</p>
+<ul>
+<li><p><em>Direct</em> = normal output</p></li>
+<li><p><em>Reverse</em> = negation</p></li>
+</ul>
+</p></li>
+<li><p><strong>UserSetState</strong> (<em>boolean</em>) – Does not work until <strong>OutofService</strong> is <em>true</em>, <strong>Out</strong> equal to <em>User Set State</em> when <strong>OutofService</strong> is <em>true</em></p></li>
+<li><p><strong>AlarmEnable</strong> (<em>boolean</em>) – <p>Digital input set to alarm state, based of alarm type</p>
+<ul>
+<li><p><em>Enable</em> when alarm is triggered</p></li>
+<li><p><em>Disable</em> when alarm failure</p></li>
+</ul>
+</p></li>
+<li><p><strong>AlarmMonitorState</strong> (<em>boolean</em>) – <p>DI alarm state</p>
+<ul>
+<li><p><em>off</em> = Alarm is triggered when DI is off</p></li>
+<li><p><em>on</em> = Alarm is triggered when DI is on</p></li>
+</ul>
+</p></li>
+<li><p><strong>AlarmResetType</strong> (<em>option</em>) – <p>Mode of alarm recovery</p>
+<ul>
+<li><p><em>Auto</em> = When DI is not in the alarm monitor state, alarm will be restored back to normal</p></li>
+<li><p><em>Manual</em> = When DI produces alarm, it only can be manually recovered</p></li>
+</ul>
+</p></li>
+<li><p><strong>ResetAlarm</strong> (<em>option</em>) – Alarm recovered manually when <strong>AlarmResetType</strong> is set to Manual</p></li>
+<li><p><strong>ResetOffCounter</strong> (<em>boolean</em>) – Enables to reset the <strong>OffCounter</strong> to 0</p></li>
+<li><p><strong>ResetOnCounter</strong> (<em>boolean</em>) – Enables to reset the <strong>OnCounter</strong> to 0</p></li>
+<li><p><strong>ResetOffTimer</strong> (<em>boolean</em>) – Enables to reset the <strong>OffTimer</strong> to 0</p></li>
+<li><p><strong>ResetOnTimer</strong> (<em>boolean</em>) – Enables to reset the <strong>OnTimer</strong> to 0</p></li>
+<li><p><strong>ClearOffLatch</strong> (<em>boolean</em>) – Clear <strong>OffLatch</strong></p></li>
+<li><p><strong>ClearOnLatch</strong> (<em>boolean</em>) – Clear <strong>OnLatch</strong></p></li>
+<li><p><strong>AlarmDelayTime</strong> (<em>integer</em><em>, </em><em>millisecond</em>) – Alarm delay time when alarm triggered</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="DO">
+<span class="sig-name descname"><span class="pre">DO</span></span><a class="headerlink" href="#DO" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/do.png"><img alt="DO component" src="_images/do.png" style="width: 300px;" /></a>
+<p><strong>DO</strong> is used for switching a physical digital output point <em>OFF</em> or <em>ON</em>.
+The typical usage is starting/stopping the external equipment such as light, valve, fan or any other digital control equipment.
+The DO component monitors the required set state and determines the proper hardware output action based on its settings.
+There are eight digital output points on <em>IO28U/IO22U/DDC28P</em> controller.
+Each of them is driven by a dry contact relay (SPST Relay) which is able to drive the external devices up to 1 Ampere (AC/DC).</p>
+<p>Digital output is a prioritized command with 16 priorities control plus a default value (relinquish default).
+<em>In1</em> has the highest priority while in16 has the lowest. In6 is reserved for minimum/maximum time controlling.
+The value can be commanded value (false = 0, true = 1) or a <em>null</em> value (= 2).
+A <em>null</em> value indicates that there is no value (or not active) in that priority.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Output state</p></li>
+<li><p><strong>In1-In16</strong> (<em>real</em>) – 16-level priority input, higher level input have higher priority to control <strong>Out</strong> value</p></li>
+<li><p><strong>Fallback</strong> (<em>boolean</em>) – Default <strong>Out</strong> value when all <strong>In1-In16</strong> are <em>Null</em></p></li>
+<li><p><strong>OffCounter</strong> (<em>integer</em>) – Accumulate number when <em>off</em> counter, from ranges of 0 - 65535</p></li>
+<li><p><strong>OnCounter</strong> (<em>integer</em>) – Accumulate number when <em>on</em> counter, from ranges of 0 - 65535</p></li>
+<li><p><strong>OnTimer</strong> (<em>integer</em>) – Accumulate counting value when <em>on</em> timer, from ranges of 0 - 65535</p></li>
+<li><p><strong>OffTimer</strong> (<em>integer</em>) – Accumulate counting value when <em>off</em> timer, from ranges of 0 - 65535</p></li>
+<li><p><strong>OutofServices</strong> (<em>boolean</em>) – <p>Enables the output to make loss of every function.</p>
+<ul>
+<li><p><em>False</em> = normal output, <em>True</em> = out of service.</p></li>
+<li><p>When <strong>OutofService</strong> is <em>true</em>, <strong>Out</strong> is always <em>0</em></p></li>
+</ul>
+</p></li>
+<li><p><strong>Polarity</strong> (<em>option</em>) – <p>Inverts the output polarity,</p>
+<ul>
+<li><p><em>Direct</em> = normal output</p></li>
+<li><p><em>Reverse</em> = negation</p></li>
+</ul>
+</p></li>
+<li><p><strong>MinOffOnStart</strong> (<em>boolean</em>) – Time delay of output conversion, based on <strong>MinOffTime</strong> and <strong>MinOnTime</strong></p></li>
+<li><p><strong>ResetOnCounter</strong> (<em>boolean</em>) – Enables to reset the <strong>OnCounter</strong> to 0</p></li>
+<li><p><strong>ResetOffCounter</strong> (<em>boolean</em>) – Enables to reset the <strong>OffCounter</strong> to 0</p></li>
+<li><p><strong>ResetOffTimer</strong> (<em>boolean</em>) – Enables to reset the <strong>OffTimer</strong> to 0</p></li>
+<li><p><strong>ResetOnTimer</strong> (<em>boolean</em>) – Enables to reset the <strong>OnTimer</strong> to 0</p></li>
+<li><p><strong>ResetOffTimer</strong> – Enables to reset the <strong>OffTimer</strong> to 0</p></li>
+<li><p><strong>InterOutputDelay</strong> (<em>integer</em><em>, </em><em>second</em>) – Output delay time</p></li>
+<li><p><strong>MinOffTime</strong> (<em>integer</em><em>, </em><em>second</em>) – Minimum time delay when output transitioned from on to off</p></li>
+<li><p><strong>MinOnTime</strong> (<em>integer</em><em>, </em><em>second</em>) – Minimum time delay when output transitioned from off to on</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="UI">
+<span class="sig-name descname"><span class="pre">UI</span></span><a class="headerlink" href="#UI" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/ui.png"><img alt="UI component" src="_images/ui.png" style="width: 300px;" /></a>
+<p><strong>UI</strong> is used for reading the analogue value connected to one of the physical universal input points on a controller.
+There are eight universal input points on <em>IO22U/IO28U/DDC28P</em> controller that support voltage, current, resistance and temperature sensors.
+The input type is selected via AI configuration and hardware jumper setting.
+For temperature sensors, the standard curves for 10K Thermistor (with or without 11K shunt), 1K Balco and 1K Platinum (in degree C and Fahrenheit F) are provided within the internal tables.
+Additional tables are also available as user defined curves.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – UI Output physical value</p></li>
+<li><p><strong>MaxValue</strong> (<em>real</em>) – Maximum record UI received</p></li>
+<li><p><strong>MinValue</strong> (<em>real</em>) – Minimum record UI received</p></li>
+<li><p><strong>Rawvalue</strong> (<em>real</em>) – Raw output value depending on the <strong>UIType</strong>, equal to 0-10 when <strong>UIType</strong> is set to 0V-10V</p></li>
+<li><p><strong>Reliability</strong> (<em>boolean</em>) – Display object state</p></li>
+<li><p><strong>Alarm</strong> (<em>boolean</em>) – Alarm state of selected channel based on limit of configurations</p></li>
+<li><p><strong>AlarmType</strong> (<em>state</em>) – Alarm type</p></li>
+<li><p><strong>AlarmResetType</strong> (<em>option</em>) – Auto or manually recovery alarm</p></li>
+<li><p><strong>HighAlarmEnable</strong> (<em>boolean</em>) – Enable <strong>AlarmHighLimit</strong></p></li>
+<li><p><strong>LowAlarmEnable</strong> (<em>boolean</em>) – Enable <strong>AlarmLowLimit</strong></p></li>
+<li><p><strong>LowCutOffEnable</strong> (<em>boolean</em>) – <p>Enable low level cuttoff</p>
+<ul>
+<li><p>Low cutoff function helps to filter unstable value by forcing the output value to scale low value when iput valvue is lower than low cutoff value.</p></li>
+<li><p>The cutoff enable can only be applied to current and voltage input type selection</p></li>
+</ul>
+</p></li>
+<li><p><strong>OutofServices</strong> (<em>boolean</em>) – <p>Enables the output to make loss of every function.</p>
+<ul>
+<li><p><em>False</em> = normal output, <em>True</em> = out of service.</p></li>
+</ul>
+</p></li>
+<li><p><strong>Linearization</strong> (<em>option</em>) – <p>Squareroot operation on input value, only applicable for input type voltage and current</p>
+<ul>
+<li><p><em>Direct</em> = linearization</p></li>
+</ul>
+</p></li>
+<li><p><strong>AlarmReset</strong> (<em>boolean</em>) – Reset alarm state, only applies to manual alarm reset</p></li>
+<li><p><strong>ResetMinvalue</strong> (<em>boolean</em>) – Enables to reset the <strong>MinValue</strong> back to 0</p></li>
+<li><p><strong>ResetMaxvalue</strong> (<em>boolean</em>) – Enables to reset the <strong>MaxValue</strong> back to 0</p></li>
+<li><p><strong>AlarmDeadband</strong> (<em>boolean</em>) – <p>Output alarm deadband value, deadband applied to AlarmLowLimit and AlarmHighLimit value to determine the return from alarm trip points.</p>
+<ul>
+<li><p><strong>Out</strong> must lower than the <strong>AlarmHighLimit</strong> by alarm deadband limit to return from high alarm trip point</p></li>
+<li><p><strong>Out</strong> must greater than the <strong>AlarmLowLimit</strong> by alarm deadband limit to return from low alarm trip point</p></li>
+</ul>
+</p></li>
+<li><p><strong>AlarmDelay</strong> (<em>integer</em><em>, </em><em>second</em>) – <p>UI alarm delay time, maximum 65535 seconds</p>
+<dl class="simple">
+<dt>The delay duration that <strong>Out</strong> must be:</dt><dd><ul>
+<li><p>in the alarm condition before alarm state is generated</p></li>
+<li><p>in the non-alarm condition before returning from alarm state</p></li>
+</ul>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>AlarmHighLimit</strong> (<em>real</em>) – High limit value</p></li>
+<li><p><strong>AlarmLowLimit</strong> (<em>real</em>) – Low limit value</p></li>
+<li><p><strong>DecimalPoint</strong> (<em>integer</em>) – decimal point precision of <strong>Out</strong> for roundup during conversion</p></li>
+<li><p><strong>DigitalOffLevel</strong> (<em>real</em>) – Off state level of <em>Out</em> value for digital transformation, <em>positive</em> level value means greater than, and a <em>negative</em> levle means lower than comparison</p></li>
+<li><p><strong>DigitalOnLevel</strong> (<em>real</em>) – On state level of <em>Out</em> value for digital transformation, <em>positive</em> level value means greater than, and a <em>negative</em> levle means lower than comparison</p></li>
+<li><p><strong>LowCutOffValue</strong> (<em>real</em>) – <strong>Out</strong> value be set to <em>ScaleLowValue</em> whenever the input value is lower than the <em>LowCutOffValue</em> if <strong>LowCutOffEnable</strong> is enabled, only applicable to current and voltage input type</p></li>
+<li><p><strong>Offset</strong> (<em>real</em>) – Offset adjustment for input</p></li>
+<li><p><strong>ScaleHighValue</strong> (<em>real</em>) – Applicable for volatge and current input only</p></li>
+<li><p><strong>ScaleLowValue</strong> (<em>real</em>) – Applicable for volatge and current input only</p></li>
+<li><p><strong>TemperatureTable</strong> (<em>option</em>) – <p>UI temperature selection from table 1 to 16</p>
+<ul>
+<li><p>This temperature table defines the temperature curve table index used for looking up conversion for temperature sensor Input type</p></li>
+<li><p>The controller has built-in 8 default temperature tables (9 to 16) and 8 user defined temperature tables (1 to 8) which are customizable in Virtual Device software (Setting-&gt;Temperature Table)</p></li>
+</ul>
+</p></li>
+<li><p><strong>UIType</strong> (<em>option</em>) – <p>Sensor type connected to physical point and determines conversion algorithm</p>
+<ul>
+<li><p>Voltage, 0-10V</p></li>
+<li><p>Voltage, 0-5V</p></li>
+<li><p>Current, 4mA-20mA</p></li>
+<li><p>Current, 0mA-20mA</p></li>
+<li><p>Resistance</p></li>
+<li><p>Sensor</p></li>
+</ul>
+</p></li>
+<li><p><strong>UserSetValue</strong> (<em>real</em>) – <strong>Out</strong> equal to <em>UserSetValue</em> when <strong>OutofService</strong> is <em>true</em></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="meki.html" class="btn btn-neutral float-left" title="meki" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mekiRegs.html" class="btn btn-neutral float-right" title="mekiRegs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, MEK Intellisys Pte Ltd.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

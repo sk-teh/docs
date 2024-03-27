@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mekiHVAC &mdash; Kits Application in XpertIO 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mekiLogic" href="mekiLogic.html" />
+    <link rel="prev" title="mekiFunction" href="mekiFunction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Kits Application in XpertIO
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Kits</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="meki.html">meki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiIO.html">mekiIO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiRegs.html">mekiRegs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiFunction.html">mekiFunction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mekiHVAC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Drive"><code class="docutils literal notranslate"><span class="pre">Drive</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Loop"><code class="docutils literal notranslate"><span class="pre">Loop</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#LSeq"><code class="docutils literal notranslate"><span class="pre">LSeq</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Psychrometric"><code class="docutils literal notranslate"><span class="pre">Psychrometric</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ReheatSeq"><code class="docutils literal notranslate"><span class="pre">ReheatSeq</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ReSet"><code class="docutils literal notranslate"><span class="pre">ReSet</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#RunTime"><code class="docutils literal notranslate"><span class="pre">RunTime</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Thermostat"><code class="docutils literal notranslate"><span class="pre">Thermostat</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mekiLogic.html">mekiLogic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiMath.html">mekiMath</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiPriority.html">mekiPriority</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiSchedule.html">mekiSchedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTempTable.html">mekiTempTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTiming.html">mekiTiming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTypes.html">mekiTypes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Kits Application in XpertIO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">mekiHVAC</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/mekiHVAC.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mekihvac">
+<h1>mekiHVAC<a class="headerlink" href="#mekihvac" title="Link to this heading"></a></h1>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Drive">
+<span class="sig-name descname"><span class="pre">Drive</span></span><a class="headerlink" href="#Drive" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/drive.png"><img alt="Drive component" src="_images/drive.png" style="width: 250px;" /></a>
+<p><strong>Drive</strong> component provides the mechanism to drive a floating type actuator with two outputs (open and close control). A single input with scale factor determines the desired position which controls the hardware output.</p>
+<p>The open and close operation time is based on the full stroke travel time, travel time. When the calculated position hits the minimum (0%) or maximum (100%), the open or close output will continue running for the drive travel time to make sure the actuator position is in place.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Open</strong> (<em>boolean</em>) – Drive current open state (read only), equal to <em>true</em> when drive is run while <em>false</em> is stop</p></li>
+<li><p><strong>Close</strong> (<em>boolean</em>) – Drive current close state (read only), equal to <em>true</em> when drive is run while <em>false</em> is stop</p></li>
+<li><p><strong>Pos</strong> (<em>integer</em>) – Current calculated position based on drive time</p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Drive position, scale from 0% to 100% using the <em>highscale</em> and <em>lowscale</em> parameters</p></li>
+<li><p><strong>Feedback</strong> (<em>real</em>) – Actual schedule feedback signal, not calculated value</p></li>
+<li><p><strong>Fb</strong> (<em>boolean</em>) – Whether or not to use the <em>Fb</em> signal</p></li>
+<li><p><strong>Highscale</strong> (<em>real</em>) – highest value of input value and equals to 100%, <cite>default=100.00</cite></p></li>
+<li><p><strong>Lowscale</strong> (<em>real</em>) – lowest value of input value and equals to 0%, <cite>default=0.00</cite></p></li>
+<li><p><strong>Hystr</strong> (<em>real</em>) – minimum changes of the input value to activate the open and close operation</p></li>
+<li><p><strong>TravelTime</strong> (<em>integer</em>) – Drives full stroke travel time in seconds(s), <cite>default = 30s</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Loop">
+<span class="sig-name descname"><span class="pre">Loop</span></span><a class="headerlink" href="#Loop" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/loop.png"><img alt="Loop component" src="_images/loop.png" style="width: 250px;" /></a>
+<p><strong>Loop</strong> component provides proportional, integral and derivative (PID) control action to the output based on the process value (input) and set point value. It monitors the process value, compares the process value to the set point, and generates the output value.</p>
+<p>PID loop control can be difficult to tune and (often for this reason) is seldom used. However, in certain cases, PID control may be needed. An example is the control of a process with a “long reaction time”, such as temperature control of a large mass. For such a lag-oriented system, the derivative component of the PID loop output can help preventing “overshoot” that might otherwise result from PID control.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Result of PID loop</p></li>
+<li><p><strong>Enable</strong> (<em>boolean</em>) – Equal to <em>True</em> to enable the PID loop algorithm to execute at the rate selected by the execute time property,
+equal to <em>False</em> to force the PID loop output to a value dependent on the selection in the disable action property</p></li>
+<li><p><strong>ControlledVariable</strong> (<em>real</em>) – Input for the controlled parameter, input must be valid for object to function</p></li>
+<li><p><strong>SetPoint</strong> (<em>real</em>) – Input for the set point value, input must be valid for object to function</p></li>
+<li><p><strong>LoopAction</strong> (<em>option</em>) – <p>Determines whether the control algorithm is direct or reverse acting</p>
+<dl class="simple">
+<dt>Direct acting mode</dt><dd><ul>
+<li><p>increase loop output as <strong>ControlledVariable</strong> <em>greater</em> than <strong>SetPoint</strong>, consided as <em>cooling</em> application</p></li>
+</ul>
+</dd>
+<dt>Reverse acting mode</dt><dd><ul>
+<li><p>increase loop output as <strong>ControlledVariable</strong> <em>less</em> than <strong>SetPoint</strong>, consided as <em>heating</em> application</p></li>
+</ul>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>DisableAction</strong> (<em>option</em>) – <p>Value of loop output set to when loop is disabled by setting the loop enable property to false.</p>
+<ul>
+<li><p><em>Max value</em> - max output property value</p></li>
+<li><p><em>Min value</em> - min output property value</p></li>
+<li><p><em>Hold</em> - maintains the output at the last calculated value</p></li>
+<li><p><em>Zero</em> - zero (0.0) value</p></li>
+</ul>
+</p></li>
+<li><p><strong>ProportionalConstant</strong> (<em>real</em>) – proportional gain parameter value used by loop algorithm, to set overall gain for loop, starting point for this value is found by output range/throttling range</p></li>
+<li><p><strong>IntegralConstant</strong> (<em>real</em>) – integral gain parameter used repeatedly per minute by loop algorithm, reset rate act on magnitude of set point error, typical starting point is <em>0.5</em></p></li>
+<li><p><strong>DerivativeConstant</strong> (<em>real</em>) – derivative gain parameter used by loop algorithm, acts on rate of change of set point error</p></li>
+<li><p><strong>Bias</strong> (<em>real</em>) – Output bias value added to output to correct offset error, used with proportional control</p></li>
+<li><p><strong>MaxOutput</strong> (<em>real</em>) – Maximum output value</p></li>
+<li><p><strong>MinOutput</strong> (<em>real</em>) – Minimum output value</p></li>
+<li><p><strong>CycleTime</strong> (<em>integer</em>) – Loop travel time in milliseconds(ms), <cite>default value = 500ms</cite></p></li>
+<li><p><strong>RampTime</strong> (<em>integer</em>) – <p>Minimum time that output can ramp completely from <em>MinOutput</em> to <em>MaxOutput</em></p>
+<ul>
+<li><p>Rate of change is enforced upon startup, or whenever the loop point transitions from disabled to enabled</p></li>
+<li><p>Once ramp time expired, it has no effect on the output, intended use is to prevent the loop from “slamming” a valve or other controlled device to a limit during startup</p></li>
+<li><p>Default ramp time is <em>0:00:00</em>, or <em>disabled</em>, ramp time enter a reasonable value when the loop starts or is enabled</p></li>
+</ul>
+</p></li>
+<li><p><strong>ResetIntegral</strong> (<em>boolean</em>) – <p>Available action on a loop point</p>
+<ul>
+<li><p>Clears the current integral component of the output calculation if <em>invoked</em></p></li>
+<li><p>Linked to another object to provide a quick purge of the integral effect if <em>needed</em></p></li>
+<li><p>Provide a “debug” utility, and should not be necessary if the loop point configuration properties are correctly defined.</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LSeq">
+<span class="sig-name descname"><span class="pre">LSeq</span></span><a class="headerlink" href="#LSeq" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/lseq.png"><img alt="LSeq component" src="_images/lseq.png" style="width: 250px;" /></a>
+<p><strong>LSeq</strong> provide a linear sequence of 2 to 16 loads based on an input 0-100 value.</p>
+<p>Analogous to a bar graph of the input value, where the delta represented by each output is (in max - in min) / num outs. So given an input value V, outputs 1 through (V - in min) / delta will be set true, and any remaining outputs will be false.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>InMin</strong> (<em>real</em>) – Min scale input value</p></li>
+<li><p><strong>InMax</strong> (<em>real</em>) – Max scale input value</p></li>
+<li><p><strong>NumberOutputs</strong> (<em>integer</em>) – Total of effective number output</p></li>
+<li><p><strong>Delta</strong> (<em>real</em>) – Delta calculation</p></li>
+<li><p><strong>DOn</strong> (<em>integer</em>) – Byte of d On</p></li>
+<li><p><strong>Out1-Out16</strong> (<em>boolean</em>) – Number of output (1 - 16)</p></li>
+<li><p><strong>Ovfl</strong> – Overflow state when <strong>In</strong> &gt; <strong>In Max</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Psychrometric">
+<span class="sig-name descname"><span class="pre">Psychrometric</span></span><a class="headerlink" href="#Psychrometric" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/psychrometric.png"><img alt="Psychrometric component" src="_images/psychrometric.png" style="width: 250px;" /></a>
+<p><strong>Psychrometric</strong> is used to support applications that need to calculate the properties of moist air using given temperature and humidity inputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>AmbientTemp</strong> (<em>real</em>) – Input temperature value</p></li>
+<li><p><strong>RelHumidity</strong> (<em>real</em>) – Input humidity value</p></li>
+<li><p><strong>TempScale</strong> (<em>unit</em>) – Celsius or Fahrenheit</p></li>
+<li><p><strong>DewPoint</strong> (<em>real</em>) – Dew point temperature value, requies valid in <em>temp</em> and in <em>humidity</em> to calculate</p></li>
+<li><p><strong>VaporPressure</strong> (<em>real</em>) – Vapor pressure value, requies valid in <em>temp</em> and in <em>humidity</em> to calculate</p></li>
+<li><p><strong>SatPressure</strong> (<em>real</em>) – Satureated pressure value ,  requies valid in <em>temp</em> to calculate</p></li>
+<li><p><strong>Enthalpy</strong> (<em>real</em>) – Enthalpy value, requies valid in <em>temp</em> and in <em>humidity</em> to calculate</p></li>
+<li><p><strong>WetBulb</strong> (<em>boolean</em>) – Wet bulb temperature value, requies valid in <em>temp</em> and in <em>humidity</em> to calculate</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ReheatSeq">
+<span class="sig-name descname"><span class="pre">ReheatSeq</span></span><a class="headerlink" href="#ReheatSeq" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/reheatseq.png"><img alt="ReheatSeq component" src="_images/reheatseq.png" style="width: 250px;" /></a>
+<p><strong>ReheatSeq</strong> will provide a linear sequence up to 4 loads based on configurable thresholds.</p>
+<p>Sets an output true if the input value is greater than corresponding threshold, and returns the output to false if the input value is less than threshold minus the hysteresis value.
+D On is the count of outputs that are true (0 to 4). If enable is false, all outputs are set to false regardless the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out1-Out4</strong> (<em>boolean</em>) – Output value (1 - 4)</p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>Enable</strong> (<em>boolean</em>) – Enables this object in effect</p></li>
+<li><p><strong>DOn</strong> (<em>integer</em>) – Byte of d On</p></li>
+<li><p><strong>Hysteresis</strong> (<em>real</em>) – hysteresis configuration</p></li>
+<li><p><strong>Threshold1-Threshold4</strong> (<em>real</em>) – threshold configuration (1 – 4)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ReSet">
+<span class="sig-name descname"><span class="pre">ReSet</span></span><a class="headerlink" href="#ReSet" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/reset.png"><img alt="ReSet component" src="_images/reset.png" style="width: 250px;" /></a>
+<p><strong>ReSet</strong> rescales input value to output value.</p>
+<p>This function performs a “reset” on the input value.
+“Reset” is a HVAC term for scaling a number between two limits.</p>
+<ul class="simple">
+<li><p>When <strong>In Min</strong> &lt; <strong>In</strong> &lt; <strong>In Max</strong>, the output value scales linearly between Out Min and Out Max.</p></li>
+<li><p>If <strong>In</strong> &lt; <strong>In Min</strong>, the value is capped at <strong>OutMin</strong>.</p></li>
+<li><p>If <strong>In</strong> &gt; <strong>In Max</strong>, the value is capped at <strong>OutMax</strong>.</p></li>
+<li><p><strong>Out</strong> is calulated by equation below:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[Out= (\frac{OutMax-OutMin}{InMax-InMin}) * (In - InMin) + OutMin\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Output value</p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>InMin</strong> (<em>real</em>) – Min input value configuration</p></li>
+<li><p><strong>InMax</strong> (<em>real</em>) – Max input value configuration</p></li>
+<li><p><strong>OutMin</strong> (<em>real</em>) – Min output scale, <cite>default is 0</cite></p></li>
+<li><p><strong>OutMax</strong> (<em>real</em>) – Max output scale, <cite>default is 100</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RunTime">
+<span class="sig-name descname"><span class="pre">RunTime</span></span><a class="headerlink" href="#RunTime" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/runtime.png"><img alt="RunTime component" src="_images/runtime.png" style="width: 250px;" /></a>
+<p><strong>RunTime</strong> record the true running time, until the state turns into false.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Time</strong> (<em>integer</em>) – Running state time in second</p></li>
+<li><p><strong>State</strong> (<em>boolean</em>) – Input value state</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Thermostat">
+<span class="sig-name descname"><span class="pre">Thermostat</span></span><a class="headerlink" href="#Thermostat" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/thermostat.png"><img alt="Thermostat component" src="_images/thermostat.png" style="width: 250px;" /></a>
+<p><strong>Thermostat</strong> provides basic thermostatic (on/off) control with a statusBoolean out property and statusNumeric inputs for controlled variable (Cv), set point (Sp), and differential (Diff). Default action is cool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Output value</p></li>
+<li><p><strong>Enable</strong> (<em>boolean</em>) – Enables this object in effect</p></li>
+<li><p><strong>Mode</strong> (<em>option</em>) – Cool or heat mode</p></li>
+<li><p><strong>Cv</strong> (<em>real</em>) – Input temperature goal</p></li>
+<li><p><strong>Sp</strong> (<em>real</em>) – Input temperature set point</p></li>
+<li><p><strong>CutIn</strong> (<em>real</em>) – Thermostat cut in value</p></li>
+<li><p><strong>CutOut</strong> (<em>real</em>) – Thermostat cut out value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mekiFunction.html" class="btn btn-neutral float-left" title="mekiFunction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mekiLogic.html" class="btn btn-neutral float-right" title="mekiLogic" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, MEK Intellisys Pte Ltd.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

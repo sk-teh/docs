@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mekiMath &mdash; Kits Application in XpertIO 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mekiPriority" href="mekiPriority.html" />
+    <link rel="prev" title="mekiLogic" href="mekiLogic.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Kits Application in XpertIO
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Kits</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="meki.html">meki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiIO.html">mekiIO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiRegs.html">mekiRegs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiFunction.html">mekiFunction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiHVAC.html">mekiHVAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiLogic.html">mekiLogic</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mekiMath</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Add2"><code class="docutils literal notranslate"><span class="pre">Add2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Avg10"><code class="docutils literal notranslate"><span class="pre">Avg10</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#AvgN"><code class="docutils literal notranslate"><span class="pre">AvgN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Ceiling"><code class="docutils literal notranslate"><span class="pre">Ceiling</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Div2"><code class="docutils literal notranslate"><span class="pre">Div2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Exp"><code class="docutils literal notranslate"><span class="pre">Exp</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Fabs"><code class="docutils literal notranslate"><span class="pre">Fabs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#FloatOffset"><code class="docutils literal notranslate"><span class="pre">FloatOffset</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Floor"><code class="docutils literal notranslate"><span class="pre">Floor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Inverse"><code class="docutils literal notranslate"><span class="pre">Inverse</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Log"><code class="docutils literal notranslate"><span class="pre">Log</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Log10"><code class="docutils literal notranslate"><span class="pre">Log10</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Max"><code class="docutils literal notranslate"><span class="pre">Max</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Min"><code class="docutils literal notranslate"><span class="pre">Min</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#MinMax"><code class="docutils literal notranslate"><span class="pre">MinMax</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Mul2"><code class="docutils literal notranslate"><span class="pre">Mul2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Pow"><code class="docutils literal notranslate"><span class="pre">Pow</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Neg"><code class="docutils literal notranslate"><span class="pre">Neg</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Round"><code class="docutils literal notranslate"><span class="pre">Round</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Squareroot"><code class="docutils literal notranslate"><span class="pre">Squareroot</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Sub2"><code class="docutils literal notranslate"><span class="pre">Sub2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#TimeAvg"><code class="docutils literal notranslate"><span class="pre">TimeAvg</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mekiPriority.html">mekiPriority</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiSchedule.html">mekiSchedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTempTable.html">mekiTempTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTiming.html">mekiTiming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTypes.html">mekiTypes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Kits Application in XpertIO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">mekiMath</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/mekiMath.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mekimath">
+<h1>mekiMath<a class="headerlink" href="#mekimath" title="Link to this heading"></a></h1>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Add2">
+<span class="sig-name descname"><span class="pre">Add2</span></span><a class="headerlink" href="#Add2" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/add2.png"><img alt="Add2 component" src="_images/add2.png" style="width: 250px;" /></a>
+<p><strong>Add2</strong> performs sum of inputs.</p>
+<div class="math notranslate nohighlight">
+\[Out  =  In1 + In2\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Output value of adding <strong>In1</strong> and <strong>In2</strong></p></li>
+<li><p><strong>In1</strong> (<em>real</em>) – Input value 1</p></li>
+<li><p><strong>In2</strong> (<em>real</em>) – Input value 2</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Avg10">
+<span class="sig-name descname"><span class="pre">Avg10</span></span><a class="headerlink" href="#Avg10" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/avg10.png"><img alt="Avg10 component" src="_images/avg10.png" style="width: 250px;" /></a>
+<p><strong>Avg10</strong> performs the division in 10 for the last 10 input value.
+It will sample current value again if it does not change in max time (ms) duration.</p>
+<div class="math notranslate nohighlight">
+\[Out = \frac{ΣIn} {10}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Average output value of last 10 <strong>In</strong></p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>MaxTime</strong> (<em>integer</em>) – Maximum time of sampling period</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="AvgN">
+<span class="sig-name descname"><span class="pre">AvgN</span></span><a class="headerlink" href="#AvgN" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/avgn.png"><img alt="AvgN component" src="_images/avgn.png" style="width: 250px;" /></a>
+<p><strong>AvgN</strong> perform the equation below.
+The purpose is to make the output to have certain proportion inherits the input value and the previous output value.</p>
+<div class="math notranslate nohighlight">
+\[Out = 1* \frac{In}{DF} + \frac{(DF-1)*Out}{DF}\]</div>
+<p>DF=Damping Factor</p>
+<p>For example,
+In=A, Last output=B, DF =16</p>
+<div class="math notranslate nohighlight">
+\[Out = \frac{A}{16} + \frac{15B}{16}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Average output value with damping factor</p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>DampingFactor</strong> (<em>integer</em>) – Decay factor (1-max)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ceiling">
+<span class="sig-name descname"><span class="pre">Ceiling</span></span><a class="headerlink" href="#Ceiling" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/ceiling.png"><img alt="Ceiling component" src="_images/ceiling.png" style="width: 250px;" /></a>
+<p><strong>Ceiling</strong> performs the least integer that is greater than or equal to the input.</p>
+<div class="math notranslate nohighlight">
+\[Out = ⌈In⌉\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Ceiling output of <strong>In</strong></p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Div2">
+<span class="sig-name descname"><span class="pre">Div2</span></span><a class="headerlink" href="#Div2" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/div2.png"><img alt="Div2 component" src="_images/div2.png" style="width: 250px;" /></a>
+<p><strong>Div2</strong> performs division operation.</p>
+<div class="math notranslate nohighlight">
+\[Out = \frac{dividend} {divisor}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Result of divided <strong>Divided</strong> by <strong>Divisor</strong></p></li>
+<li><p><strong>Dividend</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>Divisor</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>Div0</strong> (<em>boolean</em>) – Equal to true when dividend=0, otherwise Div0=false (read only)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Exp">
+<span class="sig-name descname"><span class="pre">Exp</span></span><a class="headerlink" href="#Exp" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/exp.png"><img alt="Exp component" src="_images/exp.png" style="width: 250px;" /></a>
+<p><strong>Exp</strong> performs the exponential function on the input.</p>
+<div class="math notranslate nohighlight">
+\[Out = e^{In}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Exponential value of <strong>In</strong></p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Fabs">
+<span class="sig-name descname"><span class="pre">Fabs</span></span><a class="headerlink" href="#Fabs" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/fabs.png"><img alt="Fabs component" src="_images/fabs.png" style="width: 250px;" /></a>
+<p><strong>Fabs</strong> performs the absolute value on the input.</p>
+<div class="math notranslate nohighlight">
+\[Out = |{In}|\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Absolute value of <strong>In</strong></p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="FloatOffset">
+<span class="sig-name descname"><span class="pre">FloatOffset</span></span><a class="headerlink" href="#FloatOffset" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_static/img/math/floatOffset.png"><img alt="FloatOffset component" src="_static/img/math/floatOffset.png" style="width: 250px;" /></a>
+<p><strong>FloatOffset</strong> adjusts the output value on top of the offset.</p>
+<div class="math notranslate nohighlight">
+\[Out = In  + offset\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Output value off adding <strong>In</strong> and <strong>Offset</strong></p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>Offset</strong> (<em>real</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Floor">
+<span class="sig-name descname"><span class="pre">Floor</span></span><a class="headerlink" href="#Floor" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/floor.png"><img alt="Floor component" src="_images/floor.png" style="width: 250px;" /></a>
+<p><strong>Floor</strong> performs the greatest integer that is less than or equal to the input.</p>
+<div class="math notranslate nohighlight">
+\[Out = ⌊In⌋\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Floor result of <strong>In</strong></p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Inverse">
+<span class="sig-name descname"><span class="pre">Inverse</span></span><a class="headerlink" href="#Inverse" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/inverse.png"><img alt="Inverse component" src="_images/inverse.png" style="width: 250px;" /></a>
+<p><strong>Inverse</strong> takes the inverse of input.</p>
+<div class="math notranslate nohighlight">
+\[Out = \frac{1}{In}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Inverse of <strong>In</strong></p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Log">
+<span class="sig-name descname"><span class="pre">Log</span></span><a class="headerlink" href="#Log" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/log.png"><img alt="Log component" src="_images/log.png" style="width: 250px;" /></a>
+<p><strong>Log</strong> performs the natural logarithm of input.</p>
+<div class="math notranslate nohighlight">
+\[Out = log(In)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Natural logarithm of <strong>In</strong></p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Log10">
+<span class="sig-name descname"><span class="pre">Log10</span></span><a class="headerlink" href="#Log10" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/log10.png"><img alt="Log10 component" src="_images/log10.png" style="width: 250px;" /></a>
+<p><strong>Log10</strong> performs the base 10 logarithm of input.</p>
+<div class="math notranslate nohighlight">
+\[Out = log_{10}(In)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Base 10 logarithm of <strong>In</strong></p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Max">
+<span class="sig-name descname"><span class="pre">Max</span></span><a class="headerlink" href="#Max" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/max.png"><img alt="Max component" src="_images/max.png" style="width: 250px;" /></a>
+<p><strong>Max</strong> compares two input values, thus outputs the larger one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Output the higher value in between <strong>In1</strong> and <strong>In2</strong></p></li>
+<li><p><strong>In1</strong> (<em>real</em>) – Input value 1</p></li>
+<li><p><strong>In2</strong> (<em>real</em>) – Input value 2</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Min">
+<span class="sig-name descname"><span class="pre">Min</span></span><a class="headerlink" href="#Min" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/min.png"><img alt="Min component" src="_images/min.png" style="width: 250px;" /></a>
+<p><strong>Min</strong> compares two input values, thus outputs the smaller one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Output the lower value in between <strong>In1</strong> and <strong>In2</strong></p></li>
+<li><p><strong>In1</strong> (<em>real</em>) – Input value 1</p></li>
+<li><p><strong>In2</strong> (<em>real</em>) – Input value 2</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="MinMax">
+<span class="sig-name descname"><span class="pre">MinMax</span></span><a class="headerlink" href="#MinMax" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/minmax.png"><img alt="MinMax component" src="_images/minmax.png" style="width: 250px;" /></a>
+<p><strong>MinMax</strong> records the maximum and the minimum of the input value, min out outputs the minimum record while max out outputs the maximum record respectively, until they are updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>MinOut</strong> (<em>real</em>) – Min recorded <strong>In</strong> value</p></li>
+<li><p><strong>MaxOut</strong> (<em>real</em>) – Max recorded <strong>In</strong> value</p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>Reset</strong> (<em>boolean</em>) – Reset record value back to 0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Mul2">
+<span class="sig-name descname"><span class="pre">Mul2</span></span><a class="headerlink" href="#Mul2" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/mul2.png"><img alt="Mul2 component" src="_images/mul2.png" style="width: 250px;" /></a>
+<p><strong>Mul2</strong> performs multiplication operation.</p>
+<div class="math notranslate nohighlight">
+\[Out = In1 × In2\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Multiplication of <strong>In1</strong> with <strong>In2</strong></p></li>
+<li><p><strong>In1</strong> (<em>real</em>) – Input value 1</p></li>
+<li><p><strong>In2</strong> (<em>real</em>) – Input value 2</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pow">
+<span class="sig-name descname"><span class="pre">Pow</span></span><a class="headerlink" href="#Pow" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/pow.png"><img alt="Pow component" src="_images/pow.png" style="width: 250px;" /></a>
+<p><strong>Pow</strong> performs the y power of x.</p>
+<div class="math notranslate nohighlight">
+\[Out = X^{Y}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Result of <strong>Y</strong> power of <strong>X</strong></p></li>
+<li><p><strong>X</strong> (<em>real</em>) – Input value 1</p></li>
+<li><p><strong>Y</strong> (<em>real</em>) – Input value 2</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Neg">
+<span class="sig-name descname"><span class="pre">Neg</span></span><a class="headerlink" href="#Neg" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/neg.png"><img alt="Neg component" src="_images/neg.png" style="width: 250px;" /></a>
+<p><strong>Neg</strong> negates the input value.</p>
+<div class="math notranslate nohighlight">
+\[Out = - In\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Negative value of <strong>In</strong></p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Round">
+<span class="sig-name descname"><span class="pre">Round</span></span><a class="headerlink" href="#Round" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/round.png"><img alt="Round component" src="_images/round.png" style="width: 250px;" /></a>
+<p><strong>Round</strong> rounds the input value, can retain some digits according to the rounding algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Rounding <strong>In</strong> value with <strong>DecimalPlaces</strong></p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>DecimalPlaces</strong> (<em>integer</em>) – Retains decimal point</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Squareroot">
+<span class="sig-name descname"><span class="pre">Squareroot</span></span><a class="headerlink" href="#Squareroot" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/squareroot.png"><img alt="Squareroot component" src="_images/squareroot.png" style="width: 250px;" /></a>
+<p><strong>Squareroot</strong> performs square rooted of input.</p>
+<div class="math notranslate nohighlight">
+\[Out = \sqrt{In}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – square rooted value of <strong>In</strong></p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Sub2">
+<span class="sig-name descname"><span class="pre">Sub2</span></span><a class="headerlink" href="#Sub2" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/sub2.png"><img alt="Sub2 component" src="_images/sub2.png" style="width: 250px;" /></a>
+<p><strong>Sub2</strong> performs subtraction operation.</p>
+<div class="math notranslate nohighlight">
+\[Out = minuend - subtrahend\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Subtraction of <strong>Minuend</strong> to <strong>Subtrahend</strong></p></li>
+<li><p><strong>Minuend</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>Subtrahend</strong> (<em>real</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="TimeAvg">
+<span class="sig-name descname"><span class="pre">TimeAvg</span></span><a class="headerlink" href="#TimeAvg" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/timeavg.png"><img alt="TimeAvg component" src="_images/timeavg.png" style="width: 250px;" /></a>
+<p><strong>TimeAvg</strong> averages “In” over the configured time. The actual time is marked in a resolution of scan period such that number of sample.
+The out is NOT a running average, this object caches the average over the previous time as the out value, and updates out every “time” ms.
+Until a full time cycle has elapsed, the out is set to the average off all samples collected up until that point.</p>
+<div class="math notranslate nohighlight">
+\[Out = \frac{Time * In}{ScanPeriod}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Average of <strong>In</strong> over configured time</p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value to be taken average</p></li>
+<li><p><strong>Time</strong> (<em>integer</em>) – The time period over which to average the in value to get the out value</p></li>
+<li><p><strong>ScanPeriod</strong> (<em>integer</em>) – Cycle of sampling data, units is ms</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mekiLogic.html" class="btn btn-neutral float-left" title="mekiLogic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mekiPriority.html" class="btn btn-neutral float-right" title="mekiPriority" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, MEK Intellisys Pte Ltd.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

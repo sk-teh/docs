@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mekiLogic &mdash; Kits Application in XpertIO 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mekiMath" href="mekiMath.html" />
+    <link rel="prev" title="mekiHVAC" href="mekiHVAC.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Kits Application in XpertIO
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Kits</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="meki.html">meki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiIO.html">mekiIO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiRegs.html">mekiRegs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiFunction.html">mekiFunction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiHVAC.html">mekiHVAC</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mekiLogic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ADemux2"><code class="docutils literal notranslate"><span class="pre">ADemux2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#And4"><code class="docutils literal notranslate"><span class="pre">And4</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ASW"><code class="docutils literal notranslate"><span class="pre">ASW</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#B2P"><code class="docutils literal notranslate"><span class="pre">B2P</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#BSW"><code class="docutils literal notranslate"><span class="pre">BSW</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Demuxl2B4"><code class="docutils literal notranslate"><span class="pre">Demuxl2B4</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ISW"><code class="docutils literal notranslate"><span class="pre">ISW</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Not"><code class="docutils literal notranslate"><span class="pre">Not</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Or4"><code class="docutils literal notranslate"><span class="pre">Or4</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Xor"><code class="docutils literal notranslate"><span class="pre">Xor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mekiMath.html">mekiMath</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiPriority.html">mekiPriority</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiSchedule.html">mekiSchedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTempTable.html">mekiTempTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTiming.html">mekiTiming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTypes.html">mekiTypes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Kits Application in XpertIO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">mekiLogic</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/mekiLogic.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mekilogic">
+<h1>mekiLogic<a class="headerlink" href="#mekilogic" title="Link to this heading"></a></h1>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ADemux2">
+<span class="sig-name descname"><span class="pre">ADemux2</span></span><a class="headerlink" href="#ADemux2" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/ademux2.png"><img alt="ADemux2 component" src="_images/ademux2.png" style="width: 250px;" /></a>
+<p><strong>ADemux2</strong> outputs the input value according to selected the output channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out1</strong> (<em>real</em>) – Equal to <strong>In</strong> when <strong>Sel</strong> is <em>Out1</em>, otherwise remains unchanged</p></li>
+<li><p><strong>Out2</strong> (<em>real</em>) – Equal to <strong>In</strong> when <strong>Sel</strong> is <em>Out2</em>, otherwise remains unchanged</p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>Sel</strong> (<em>option</em>) – Select the output channel, <em>Out1</em> or <em>Out2</em></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="And4">
+<span class="sig-name descname"><span class="pre">And4</span></span><a class="headerlink" href="#And4" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/and4.png"><img alt="And4 component" src="_images/and4.png" style="width: 250px;" /></a>
+<p><strong>And4</strong> performs a logical AND towards all inputs and writes the result to the out property.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>In1</p></th>
+<th class="head"><p>In2</p></th>
+<th class="head"><p>In3</p></th>
+<th class="head"><p>In4</p></th>
+<th class="head"><p>Out</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>false</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-odd"><td><p>true</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-even"><td><p>false</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-odd"><td><p>false</p></td>
+<td><p>false</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-even"><td><p>false</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-odd"><td><p>true</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-even"><td><p>true</p></td>
+<td><p>false</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-odd"><td><p>true</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-even"><td><p>false</p></td>
+<td><p>true</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-odd"><td><p>false</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-even"><td><p>false</p></td>
+<td><p>false</p></td>
+<td><p>true</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-odd"><td><p>true</p></td>
+<td><p>true</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-even"><td><p>true</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-odd"><td><p>true</p></td>
+<td><p>false</p></td>
+<td><p>true</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-even"><td><p>false</p></td>
+<td><p>true</p></td>
+<td><p>true</p></td>
+<td><p>true</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-odd"><td><p>true</p></td>
+<td><p>true</p></td>
+<td><p>true</p></td>
+<td><p>true</p></td>
+<td><p>true</p></td>
+</tr>
+</tbody>
+</table>
+<p>truth table when using four inputs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ASW">
+<span class="sig-name descname"><span class="pre">ASW</span></span><a class="headerlink" href="#ASW" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/asw.png"><img alt="ASW component" src="_images/asw.png" style="width: 250px;" /></a>
+<p><strong>ASW</strong> outputs the input value according to selected the input channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Equal to <strong>In1</strong> when <strong>S1</strong> is <em>In1</em>, otherwise equal to <strong>In2</strong></p></li>
+<li><p><strong>In1</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>In2</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>S1</strong> (<em>option</em>) – Select the input channel, <em>In1</em> or <em>In2</em></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="B2P">
+<span class="sig-name descname"><span class="pre">B2P</span></span><a class="headerlink" href="#B2P" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/b2p.png"><img alt="B2P component" src="_images/b2p.png" style="width: 250px;" /></a>
+<p><strong>B2P</strong> is short of “Boolean to pulse”. It outputs a pulse signal when input value is made to true.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Pulse signal output</p></li>
+<li><p><strong>In</strong> (<em>boolean</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="BSW">
+<span class="sig-name descname"><span class="pre">BSW</span></span><a class="headerlink" href="#BSW" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/bsw.png"><img alt="BSW component" src="_images/bsw.png" style="width: 250px;" /></a>
+<p><strong>BSW</strong> outputs the input values according to selected the input channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Equal to <strong>In1</strong> when <strong>S1</strong> is <em>In1</em>, otherwise equal to <strong>In2</strong></p></li>
+<li><p><strong>In1</strong> (<em>boolean</em>) – Input value</p></li>
+<li><p><strong>In2</strong> (<em>boolean</em>) – Input value</p></li>
+<li><p><strong>S1</strong> (<em>option</em>) – Select the input channel, <em>In1</em> or <em>In2</em></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Demuxl2B4">
+<span class="sig-name descname"><span class="pre">Demuxl2B4</span></span><a class="headerlink" href="#Demuxl2B4" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/demux2b4.png"><img alt="Demuxl2B4 component" src="_images/demux2b4.png" style="width: 250px;" /></a>
+<p><strong>Demuxl2B4</strong> outputs the input values according to selected the input channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>In</strong> (<em>integer</em>) – Input value</p></li>
+<li><p><strong>Out1-Out4</strong> (<em>boolean</em>) – Only 1 <em>Out</em> equal to true each time base on logic:
+Out(x) = true, while x = <strong>In</strong> – <strong>StartsAt</strong> + 1,
+all <em>Out</em> equal to false if x &gt; 4 and x &lt; 1</p></li>
+<li><p><strong>StartsAt</strong> (<em>integer</em>) – Offset value for <strong>In</strong> selection</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ISW">
+<span class="sig-name descname"><span class="pre">ISW</span></span><a class="headerlink" href="#ISW" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/isw.png"><img alt="ISW component" src="_images/isw.png" style="width: 250px;" /></a>
+<p><strong>ISW</strong> outputs the input values according to selected the input channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>integer</em>) – Equal to <strong>In1</strong> when <strong>S1</strong> is <em>In1</em>, otherwise equal to <strong>In2</strong></p></li>
+<li><p><strong>In1</strong> (<em>integer</em>) – Input value</p></li>
+<li><p><strong>In2</strong> (<em>integer</em>) – Input value</p></li>
+<li><p><strong>S1</strong> (<em>option</em>) – Select the input channel, <em>In1</em> or <em>In2</em></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Not">
+<span class="sig-name descname"><span class="pre">Not</span></span><a class="headerlink" href="#Not" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/not.png"><img alt="Not component" src="_images/not.png" style="width: 250px;" /></a>
+<p><strong>Not</strong> outputs a contrary of the input value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Opposite value of <strong>In</strong></p></li>
+<li><p><strong>In</strong> (<em>boolean</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Or4">
+<span class="sig-name descname"><span class="pre">Or4</span></span><a class="headerlink" href="#Or4" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/or4.png"><img alt="Or4 component" src="_images/or4.png" style="width: 250px;" /></a>
+<p><strong>Or4</strong> outputs the input values according to selected the input channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Equal to true if one of the <em>In1-In4</em> is true</p></li>
+<li><p><strong>In1-In4</strong> (<em>boolean</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Xor">
+<span class="sig-name descname"><span class="pre">Xor</span></span><a class="headerlink" href="#Xor" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/xor.png"><img alt="Xor component" src="_images/xor.png" style="width: 250px;" /></a>
+<p><strong>Xor</strong> outputs the input values according to selected the input channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Equal to true if both <em>In1</em> and <em>In2</em> are not identical</p></li>
+<li><p><strong>In1</strong> (<em>boolean</em>) – Input value</p></li>
+<li><p><strong>In2</strong> (<em>boolean</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mekiHVAC.html" class="btn btn-neutral float-left" title="mekiHVAC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mekiMath.html" class="btn btn-neutral float-right" title="mekiMath" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, MEK Intellisys Pte Ltd.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

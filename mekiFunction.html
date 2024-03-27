@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mekiFunction &mdash; Kits Application in XpertIO 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mekiHVAC" href="mekiHVAC.html" />
+    <link rel="prev" title="mekiRegs" href="mekiRegs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Kits Application in XpertIO
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Kits</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="meki.html">meki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiIO.html">mekiIO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiRegs.html">mekiRegs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mekiFunction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Cmpr"><code class="docutils literal notranslate"><span class="pre">Cmpr</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Count"><code class="docutils literal notranslate"><span class="pre">Count</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Freq"><code class="docutils literal notranslate"><span class="pre">Freq</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Hysteresis"><code class="docutils literal notranslate"><span class="pre">Hysteresis</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#IRamp"><code class="docutils literal notranslate"><span class="pre">IRamp</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Limiter"><code class="docutils literal notranslate"><span class="pre">Limiter</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Linearize"><code class="docutils literal notranslate"><span class="pre">Linearize</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Ramp"><code class="docutils literal notranslate"><span class="pre">Ramp</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#SRLatch"><code class="docutils literal notranslate"><span class="pre">SRLatch</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#TickTock"><code class="docutils literal notranslate"><span class="pre">TickTock</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#UpDn"><code class="docutils literal notranslate"><span class="pre">UpDn</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mekiHVAC.html">mekiHVAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiLogic.html">mekiLogic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiMath.html">mekiMath</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiPriority.html">mekiPriority</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiSchedule.html">mekiSchedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTempTable.html">mekiTempTable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTiming.html">mekiTiming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTypes.html">mekiTypes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Kits Application in XpertIO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">mekiFunction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/mekiFunction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mekifunction">
+<h1>mekiFunction<a class="headerlink" href="#mekifunction" title="Link to this heading"></a></h1>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Cmpr">
+<span class="sig-name descname"><span class="pre">Cmpr</span></span><a class="headerlink" href="#Cmpr" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/cmpr.png"><img alt="Compare component" src="_images/cmpr.png" style="width: 250px;" /></a>
+<p><strong>Cmpr</strong> is used to compare two input values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Xgy</strong> (<em>boolean</em>) – <em>true</em> when <strong>X</strong> is greater than <strong>Y</strong>, else <em>false</em></p></li>
+<li><p><strong>Xey</strong> (<em>boolean</em>) – <em>true</em> when <strong>X</strong> is equal to <strong>Y</strong>, else <em>false</em></p></li>
+<li><p><strong>Xly</strong> (<em>boolean</em>) – <em>true</em> when <strong>X</strong> is less than <strong>Y</strong>, else <em>false</em></p></li>
+<li><p><strong>X</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>Y</strong> (<em>real</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Count">
+<span class="sig-name descname"><span class="pre">Count</span></span><a class="headerlink" href="#Count" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/count.png"><img alt="Count component" src="_images/count.png" style="width: 250px;" /></a>
+<p><strong>Count</strong> is used to count the transistion of a boolean value from <em>false</em> to <em>true</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>integer</em>) – Number of times <em>In</em> has transitioned from <em>false</em> to <em>true</em></p></li>
+<li><p><strong>In</strong> (<em>boolean</em>) – Input value</p></li>
+<li><p><strong>Present</strong> (<em>integer</em>) – Presets the counter to a specific value, defaults to 0</p></li>
+<li><p><strong>Dir</strong> (<em>boolean</em>) – Count direction, <em>true</em> for up while <em>false</em> for down</p></li>
+<li><p><strong>Enable</strong> (<em>boolean</em>) – To enable <strong>In</strong> counting</p></li>
+<li><p><strong>Reset</strong> (<em>boolean</em>) – If <em>true</em>, <strong>out</strong> = <strong>preset</strong> and no counting. It act as a reset switch</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Freq">
+<span class="sig-name descname"><span class="pre">Freq</span></span><a class="headerlink" href="#Freq" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/freq.png"><img alt="Frequency component" src="_images/freq.png" style="width: 250px;" /></a>
+<p><strong>Freq</strong> is used to calculate the changing frequency of a boolean value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Pps</strong> (<em>real</em>) – The changes in the frequency per second</p></li>
+<li><p><strong>Ppm</strong> (<em>real</em>) – The changes in the frequency per minute</p></li>
+<li><p><strong>In</strong> (<em>boolean</em>) – Input value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Hysteresis">
+<span class="sig-name descname"><span class="pre">Hysteresis</span></span><a class="headerlink" href="#Hysteresis" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/hysteresis.png"><img alt="Hysteresis component" src="_images/hysteresis.png" style="width: 250px;" /></a>
+<p><strong>Hysteresis</strong> can output a boolean value according to thier rising edge and falling edge limit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>Out</strong> (<em>boolean</em>) – Output value</p></li>
+<li><p><strong>Rising_Edge</strong> (<em>real</em>) – Rising edge limit, <strong>Out</strong> become <em>true</em> when <strong>In</strong> greater than it</p></li>
+<li><p><strong>Falling_Edge</strong> (<em>real</em>) – Falling edge limit, <strong>Out</strong> become <em>false</em> when <strong>In</strong> less than it</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="IRamp">
+<span class="sig-name descname"><span class="pre">IRamp</span></span><a class="headerlink" href="#IRamp" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/iramp.png"><img alt="IRamp component" src="_images/iramp.png" style="width: 250px;" /></a>
+<p><strong>IRamp</strong> provides linear ramping output based on time set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>integer</em>) – Output value</p></li>
+<li><p><strong>Min</strong> (<em>integer</em>) – Start value of the ramping</p></li>
+<li><p><strong>Max</strong> (<em>integer</em>) – End value of the ramping</p></li>
+<li><p><strong>Delta</strong> (<em>integer</em>) – Value change every time</p></li>
+<li><p><strong>Secs</strong> (<em>integer</em><em>, </em><em>second</em>) – Time intervals very time change</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Limiter">
+<span class="sig-name descname"><span class="pre">Limiter</span></span><a class="headerlink" href="#Limiter" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/limiter.png"><img alt="Limiter component" src="_images/limiter.png" style="width: 250px;" /></a>
+<p><strong>Limiter</strong> limits the output according to the upper limit and lower limit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Output value</p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>lowLmt</strong> (<em>real</em>) – Lower limit for <strong>Out</strong></p></li>
+<li><p><strong>highLmt</strong> (<em>real</em>) – Upper limit for <strong>Out</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Linearize">
+<span class="sig-name descname"><span class="pre">Linearize</span></span><a class="headerlink" href="#Linearize" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/linearize.png"><img alt="Linearize component" src="_images/linearize.png" style="width: 250px;" /></a>
+<p><strong>Linearize</strong> defines 8 sets of corresponding data, and calculate the output value according to the input value with linearization data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Output value</p></li>
+<li><p><strong>In</strong> (<em>real</em>) – Input value</p></li>
+<li><p><strong>x0-x9</strong> (<em>real</em>) – Range for <strong>In</strong></p></li>
+<li><p><strong>y0-y9</strong> (<em>real</em>) – Range of converted <strong>Out</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Ramp">
+<span class="sig-name descname"><span class="pre">Ramp</span></span><a class="headerlink" href="#Ramp" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/ramp.png"><img alt="Ramp component" src="_images/ramp.png" style="width: 250px;" /></a>
+<p><strong>Ramp</strong> provides a triangle or sawtooth type ramping output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Output value</p></li>
+<li><p><strong>Min</strong> (<em>real</em>) – Minimum value of the ramping <strong>Out</strong></p></li>
+<li><p><strong>Max</strong> (<em>real</em>) – Maximum value of the ramping <strong>Out</strong></p></li>
+<li><p><strong>Period</strong> (<em>integer</em><em>, </em><em>second</em>) – The time for one complete <strong>Min</strong> / <strong>Max</strong> in second for ramp <strong>Out</strong>, range from 0 to 65535</p></li>
+<li><p><strong>ScanPeriod</strong> (<em>integer</em><em>, </em><em>millisecond</em>) – The time for <strong>Out</strong> updating interval, range from 100 to 65535</p></li>
+<li><p><strong>RampType</strong> (<em>option</em>) – Ramp type, <em>triangle</em> or <em>sawtooth</em></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="SRLatch">
+<span class="sig-name descname"><span class="pre">SRLatch</span></span><a class="headerlink" href="#SRLatch" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/srlatch.png"><img alt="SRLatch component" src="_images/srlatch.png" style="width: 250px;" /></a>
+<p><strong>SRLatch</strong> keeps output value to true as long as the set value is true, until the reset is triggered.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Output value</p></li>
+<li><p><strong>Set</strong> (<em>boolean</em>) – Triggers to set <strong>Out</strong> to <em>true</em></p></li>
+<li><p><strong>Reset</strong> (<em>boolean</em>) – Triggers to restore <strong>Out</strong> back to <em>false</em></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="TickTock">
+<span class="sig-name descname"><span class="pre">TickTock</span></span><a class="headerlink" href="#TickTock" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/ticktock.png"><img alt="TickTock component" src="_images/ticktock.png" style="width: 250px;" /></a>
+<p><strong>TickTock</strong> outputs <em>true</em> and <em>false</em> values alternately according to the frequency</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Constantly change between <em>true</em> and <em>false</em></p></li>
+<li><p><strong>TickPerSec</strong> (<em>integer</em>) – Change frequency of <strong>Out</strong>, range from 1 to 10</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UpDn">
+<span class="sig-name descname"><span class="pre">UpDn</span></span><a class="headerlink" href="#UpDn" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/updn.png"><img alt="UpDn component" src="_images/updn.png" style="width: 250px;" /></a>
+<p><strong>UpDn</strong> records the changes of the input value, the record number can be documented in increasing or reducing order. The records can be reset too.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>real</em>) – Output Value</p></li>
+<li><p><strong>Ovr</strong> (<em>boolean</em>) – <em>true</em> when <strong>Out</strong> is greater than <strong>Limit</strong></p></li>
+<li><p><strong>In</strong> (<em>boolean</em>) – Input Value</p></li>
+<li><p><strong>Rst</strong> (<em>boolean</em>) – Triggers to restore <strong>Out</strong> to <em>0</em></p></li>
+<li><p><strong>CDwn</strong> (<em>option</em>) – The trend of recorded <strong>Out</strong>, either <em>Up</em> or <em>Down</em></p></li>
+<li><p><strong>Limit</strong> (<em>real</em>) – Limits <strong>Out</strong> when <strong>HoldAtLimit</strong> is <em>true</em></p></li>
+<li><p><strong>HoldAtLimit</strong> (<em>boolean</em>) – Enable the <strong>Limit</strong> function</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mekiRegs.html" class="btn btn-neutral float-left" title="mekiRegs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mekiHVAC.html" class="btn btn-neutral float-right" title="mekiHVAC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, MEK Intellisys Pte Ltd.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

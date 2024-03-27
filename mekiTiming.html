@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mekiTiming &mdash; Kits Application in XpertIO 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mekiTypes" href="mekiTypes.html" />
+    <link rel="prev" title="mekiTempTable" href="mekiTempTable.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Kits Application in XpertIO
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Kits</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="meki.html">meki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiIO.html">mekiIO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiRegs.html">mekiRegs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiFunction.html">mekiFunction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiHVAC.html">mekiHVAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiLogic.html">mekiLogic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiMath.html">mekiMath</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiPriority.html">mekiPriority</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiSchedule.html">mekiSchedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTempTable.html">mekiTempTable</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mekiTiming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#DlyOff"><code class="docutils literal notranslate"><span class="pre">DlyOff</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#DlyOn"><code class="docutils literal notranslate"><span class="pre">DlyOn</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#OneShot"><code class="docutils literal notranslate"><span class="pre">OneShot</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Override"><code class="docutils literal notranslate"><span class="pre">Override</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Timer"><code class="docutils literal notranslate"><span class="pre">Timer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mekiTypes.html">mekiTypes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Kits Application in XpertIO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">mekiTiming</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/mekiTiming.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mekitiming">
+<h1>mekiTiming<a class="headerlink" href="#mekitiming" title="Link to this heading"></a></h1>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DlyOff">
+<span class="sig-name descname"><span class="pre">DlyOff</span></span><a class="headerlink" href="#DlyOff" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/dlyoff.png"><img alt="DlyOff component" src="_images/dlyoff.png" style="width: 250px;" /></a>
+<p><strong>DlyOff</strong> delays the on to off transition by a time delay.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Output value</p></li>
+<li><p><strong>In</strong> (<em>boolean</em>) – Input value</p></li>
+<li><p><strong>DelayTime</strong> (<em>integer</em><em>, </em><em>second</em>) – Delays time from on to off transition</p></li>
+<li><p><strong>Hold</strong> (<em>integer</em><em>, </em><em>millisecond</em>) – Countdown of delay time</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DlyOn">
+<span class="sig-name descname"><span class="pre">DlyOn</span></span><a class="headerlink" href="#DlyOn" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/dlyon.png"><img alt="DlyOn component" src="_images/dlyon.png" style="width: 250px;" /></a>
+<p><strong>DlyOn</strong> delays the off to on transition by a time delay.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Output value</p></li>
+<li><p><strong>In</strong> (<em>boolean</em>) – Input value</p></li>
+<li><p><strong>DelayTime</strong> (<em>integer</em><em>, </em><em>second</em>) – Delays time from off to on transition</p></li>
+<li><p><strong>Hold</strong> (<em>integer</em><em>, </em><em>millisecond</em>) – Countdown of delay time</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="OneShot">
+<span class="sig-name descname"><span class="pre">OneShot</span></span><a class="headerlink" href="#OneShot" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/oneshot.png"><img alt="OneShot component" src="_images/oneshot.png" style="width: 250px;" /></a>
+<p><strong>OneShot</strong> generating boolean one-shot pulse.
+<strong>Out</strong> = <em>true</em> for <strong>pulseWidth</strong> sec, beginning at rising edge of <strong>In</strong>, the pulse retriggers on each rising edge of <strong>In</strong>, when <strong>canRetrig</strong> = <em>true</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Output value</p></li>
+<li><p><strong>In</strong> (<em>boolean</em>) – Input value</p></li>
+<li><p><strong>PulseWidth</strong> (<em>integer</em><em>, </em><em>second</em>) – Pulse width</p></li>
+<li><p><strong>CanRetrig</strong> (<em>boolean</em>) – Enable the retrigger function</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Override">
+<span class="sig-name descname"><span class="pre">Override</span></span><a class="headerlink" href="#Override" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/override.png"><img alt="Override component" src="_images/override.png" style="width: 250px;" /></a>
+<p><strong>Override</strong> provide output of true for <strong>OverrideTime</strong> during <strong>Trigger</strong> is triggered from <em>false</em> to <em>true</em>. The remaining override time is counted in <strong>RemainTime</strong>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Output value</p></li>
+<li><p><strong>RemainTime</strong> (<em>integer</em><em>, </em><em>minute</em>) – Remaining override time</p></li>
+<li><p><strong>OverrideTime</strong> (<em>integer</em><em>, </em><em>minute</em>) – Override time</p></li>
+<li><p><strong>Trigger</strong> (<em>boolean</em>) – Triggers the component start</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Timer">
+<span class="sig-name descname"><span class="pre">Timer</span></span><a class="headerlink" href="#Timer" title="Link to this definition"></a></dt>
+<dd><a class="reference internal image-reference" href="_images/timer.png"><img alt="Timer component" src="_images/timer.png" style="width: 250px;" /></a>
+<p><strong>Timer</strong> outputs a pulse for the configured amount of <strong>Time</strong>, <strong>Run</strong> is used to trigger the timer:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If <em>low</em>, <strong>Out</strong> is forced to be <em>false</em></p></li>
+<li><p>If <em>high</em>, <strong>Out</strong> = 1 until timer reaches <em>time</em> seconds</p></li>
+</ul>
+</div></blockquote>
+<p>Alternatively, the pulse can be fired from the “start Timer” action if in is not linked.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Out</strong> (<em>boolean</em>) – Output value</p></li>
+<li><p><strong>Run</strong> (<em>option</em>) – fire the timer on transition from false to true</p></li>
+<li><p><strong>Time</strong> (<em>integer</em><em>, </em><em>second</em>) – Duration of output pulse</p></li>
+<li><p><strong>Left</strong> (<em>integer</em><em>, </em><em>second</em>) – Remaining time before output transition from true to false</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mekiTempTable.html" class="btn btn-neutral float-left" title="mekiTempTable" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mekiTypes.html" class="btn btn-neutral float-right" title="mekiTypes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, MEK Intellisys Pte Ltd.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
